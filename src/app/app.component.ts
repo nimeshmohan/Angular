@@ -4,12 +4,12 @@ import { Headercomponent } from "./header/header.components";
 import { UserComponent } from "./user/user.component";
 import { DUMMY_USERS } from './dummy-users';
 import { TasksComponent } from './tasks/tasks.component';
-import { NgFor, NgIf } from '@angular/common';
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Headercomponent, UserComponent, TasksComponent, NgFor, NgIf],
+  imports: [RouterOutlet, Headercomponent, UserComponent, TasksComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -21,6 +21,7 @@ export class AppComponent {
   }
 
   users = DUMMY_USERS;
+  
   selectdUserId?: string;
 
   get selectedUser(){
