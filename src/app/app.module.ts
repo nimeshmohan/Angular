@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Headercomponent } from './header/header.components';
 import { UserComponent } from './user/user.component';
-import { TasksComponent } from './tasks/tasks.component';
+import { SharedModule } from './shared/shared.module';
+import { TasksModule } from './tasks/tasks.module';
+
 
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, Headercomponent, UserComponent, ],
     bootstrap: [AppComponent],
-    imports: [BrowserModule, Headercomponent,UserComponent, TasksComponent]
+    imports: [BrowserModule, SharedModule, TasksModule]
 })
-export class AppModule {}
+export class AppModule { }
